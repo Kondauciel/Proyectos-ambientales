@@ -25,6 +25,7 @@
         </nav>
     </header>
     <h2>Inicio de sesión</h2>
+    
 	<form action="procesar_login.php" method="POST">
 		<label for="email">Correo electrónico:</label>
 		<input type="text" id="email" name="email" required>
@@ -34,6 +35,7 @@
         <br>
 		<input type="submit" value="Iniciar sesión">
 	</form>
+
 	<p>Registrarse <a href="registro.php">Regístrate aquí</a></p>
 </body>
 </html>
