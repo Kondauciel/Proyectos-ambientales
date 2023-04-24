@@ -13,8 +13,8 @@
             try{
                 include'conexion.php';
                 $conecta=new Conectar();
-                $consulta= $conecta->prepare("INSERT INTO Productos(Nombre, Precio, Existencias)
-                VALUES(:nombre, :precio,:existencias)");
+                $consulta= $conecta->prepare("INSERT INTO Usuarios(Nombre,Correo,Clave,Telefono,Estado,Municipio,Colonia,CodigoPostal)
+                VALUES(:Nombre,:Correo,:Clave,:Telefono,:Estado,:Municipio,:Colonia,:CodigoPostal)");
                 $consulta-> bindParam(":Nombre", $Nombre, PDO:: PARAM_STR);
                 $consulta-> bindParam(":Correo", $Correo, PDO:: PARAM_STR);
                 $consulta-> bindParam(":Clave", $Clave, PDO:: PARAM_STR);

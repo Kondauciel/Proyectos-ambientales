@@ -33,26 +33,42 @@
         <input type="number" name="Codigo postal"><br>
         <input type="submit" value="Quiero registrarme">
     </form>
-    <tbody>
-        <?php
-            require_once 'Models/usuario.php';
-            $producto=new Usuario();
-            $resultado=$producto->ObtenerUsuario();
-            if(count($resultado)>0){
-                foreach ($resultado as $registro) {
-                    echo '<tr>';
-                    echo '<td>'.$registro['Id'].'</td>';
-                    echo '<td>'.$registro['Nombre'].'</td>';
-                    echo '<td>'.$registro['Correo'].'</td>';
-                    echo '<td>'.$registro['Clave'].'</td>';
-                    echo '<td>'.$registro['Estado'].'</td>';
-                    echo '<td>'.$registro['Municipio'].'</td>';
-                    echo '<td>'.$registro['Colonia'].'</td>';
-                    echo '<td>'.$registro['CodigoPostal'].'</td>';
-                    echo '</tr>';
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>Contraseña</th>
+                <th>Telefono</th>
+                <th>Estado</th>
+                <th>Municipio</th>
+                <th>Colonia</th>
+                <th>C.P.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                require_once 'Models/usuario.php';
+                $producto=new Usuario();
+                $resultado=$producto->ObtenerUsuario();
+                if(count($resultado)>0){
+                    foreach ($resultado as $registro) {
+                        echo '<tr>';
+                        echo '<td>'.$registro['Id'].'</td>';
+                        echo '<td>'.$registro['Nombre'].'</td>';
+                        echo '<td>'.$registro['Correo'].'</td>';
+                        echo '<td>'.$registro['Clave'].'</td>';
+                        echo '<td>'.$registro['Estado'].'</td>';
+                        echo '<td>'.$registro['Municipio'].'</td>';
+                        echo '<td>'.$registro['Colonia'].'</td>';
+                        echo '<td>'.$registro['CodigoPostal'].'</td>';
+                        echo '</tr>';
+                    }
                 }
-            }
-        ?>
-    </tbody>
+            ?>
+        </tbody>
+    </table>
+   
 </body>
 </html>
