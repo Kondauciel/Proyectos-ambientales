@@ -11,9 +11,9 @@
     if (!empty($Nombre)&&!empty($Correo)&&!empty($Clave)&&!empty($Telefono)&&!empty($Estado)&&!empty($Municipio)&&!empty($Colonia)&&!empty($CodigoPostal)){
         require_once'Models/usuario.php';
         $Usuario=new Usuario();
-        $resultado=$Usuario->CrearUsuario ($Nombre,$Correo,$Clave,$Telefono,$Estado,$Municipio,$Colonia,$CodigoPostal);
+        $resultado=$Usuario->CrearUsuario($Nombre,$Correo,$Clave,$Telefono,$Estado,$Municipio,$Colonia,$CodigoPostal);
         if ($resultado){
-            header("Location:index.php");
+            header("Location:index.html");
         }
         else {
             header ("Location:registro.php"); 
