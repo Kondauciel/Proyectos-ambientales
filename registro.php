@@ -30,7 +30,7 @@
         <label >Colonia:</label>
         <input type="text" name="Colonia"><br>
         <label >Codigo Postal:</label>
-        <input type="number" name="Codigo postal"><br>
+        <input type="number" name="CodigoPostal"><br>
         <input type="submit" value="Quiero registrarme">
     </form>
     <table>
